@@ -9,7 +9,7 @@ public class Samsung
 {	
 	/*this autowired searches the type of object in configuration class.
    * it mainly checks the returntype of the object created i.e. MobileProcessor in this case. */
-	 @Autowired 
+	// @Autowired 
 	 @Qualifier("mediaTek")
 	MobileProcessor cpu;
 	

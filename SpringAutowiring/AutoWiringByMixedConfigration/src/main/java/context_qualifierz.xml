@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        
+        <!--  used to activate the dependency injection annotations. -->
+       <context:annotation-config></context:annotation-config>
+        
+        <!-- creating bean for human class -->
+    <bean id ="humanObj" class = "com.bridgelabz.spring.autowiring_by_mixed_configration_qualifierz.Human"/>
+        
+        
+        
+          <!-- creating bean1 for heart class -->
+    <bean id ="humanHeartObj" class = "com.bridgelabz.spring.autowiring_by_mixed_configration_qualifierz.Heart">
+    <!-- autowire is not for the primitive data type so we have used property tag in xml file. -->
+    <!-- setting the values for the variables of heart. -->
+    <property name="nameOfAnimal" value ="human"></property>
+    <property name="noOfHeart" value= "1"/>
+    </bean>
+        
+          <!-- creating bean2 for heart class -->
+    <bean id ="octopusHeartObj" class = "com.bridgelabz.spring.autowiring_by_mixed_configration_qualifierz.Heart">
+    <!-- autowire is not for the primitive data type so we have used property tag in xml file. -->
+    <!-- setting the values for the variables of heart. -->
+    <property name="nameOfAnimal" value ="octopus"></property>
+    <property name="noOfHeart" value= "3"></property>
+     </bean>
+    
+    </beans>
+           

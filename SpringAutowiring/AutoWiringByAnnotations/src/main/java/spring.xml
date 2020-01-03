@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- scanning for the components in our project. -->
+	<context:component-scan base-package="package com.bridgelabz.spring.autowiring_by_annotations;"></context:component-scan>
+	
+	<!-- after this command the spring will not search the command for making the beans in xml file 
+	rather it will search for the component classes in the package provided and then will amke the 
+	respective beans of that component classses. -->
+	
+</beans>
