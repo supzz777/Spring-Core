@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans   xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        <!-- enable annotations on -->
+        
+      <!--    <context:annotation-config/>   -->
+      
+         <!-- (OR) we can also enable annotations by writing-->
+         
+   <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/> 
+        
+        
+      
+        
+        
+     <bean id ="studentDAOobject" 
+      class= "com.bridgelabz.spring.bean_life_cycle_using_xml_only.StudentDAO" 
+      init-method= "init"
+      destroy-method= "destroy">
+     
+     <property name="driver" value= "com.mysql.jdbc.Driver"></property>
+     <property name="url" value= "jdbc:mysql://localhost:3306/supzz777"/>
+     <property name="username" value= "root"/>
+     <property name="password" value= "password"></property>
+     
+     </bean>
+  
+  
+  
+  <!-- for ex-> if you have 100 beans and for that you have same init and destroy methods . 
+  	hence dont write the init and destroy method again and again initialise it in <beans> tag.
+  	
+  	<beans   xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+        default-init-method ="init"
+        default-destroy-method ="destroy">
+  	
+  	 -->
+</beans>
